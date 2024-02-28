@@ -287,6 +287,9 @@ openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet.crt |grep -A2 Valid
 
 ## 16 - One pod with 3 containers, same storage (not PV)
 
+Search for emptyDir type of storage.
+
+Also they might ask to encapsulate an env variable into a pod, smth like MY_NODE_NAME
 
 
 ## 17 - add a sidecar container

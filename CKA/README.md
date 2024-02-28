@@ -379,5 +379,15 @@ k scale deployment depl1 --replicas=3
 ```
 
 
+## 25 - Pods with PriorityClass
+
+priorityClass, priority pods, usage 
+
+
+
+## 26 - Init Container
+
+Adding an init container to an existing pod.
+
 
 

@@ -28,7 +28,7 @@ you would be glad you KNOW how to do stuff instead of searching through the docu
  
 
 
-## 1 | Cluster (or one Node) upgrade to a specific version
+## 1 - Cluster (or one Node) upgrade to a specific version
 
 Upgrading a controlplane, worker node or the whole cluster to a **specific** k8s version.
 
@@ -88,7 +88,7 @@ Uncordon the node
 
 
 
-## 2 | ETCD backup and restore
+## 2 - ETCD backup and restore
 
 See docs: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
@@ -113,7 +113,7 @@ ETCDCTL_API=3 etcdctl --cert=/etc/kubernetes/pki/etcd/server.crt \
 
 
 
-## 3 | Join Node to the cluster
+## 3 - Join Node to the cluster
 
 Add a new node to a cluster. You can use the Killercoda CKA playground and delete a node01 first:
 ```
@@ -136,7 +136,7 @@ kubeadm join 172.30.1.2:6443 --token d5115h.d4uap9x5z0pdncf4 --discovery-token-c
 ```
 
 
-## 4 | Troubleshoot (kubelet)
+## 4 - Troubleshoot (kubelet)
 
 service not running, mostly because the conf. is wrong and/or kubelet binary is misplaced
 
@@ -145,7 +145,7 @@ I only had to "systemctl restart kubelet".
 
 
 
-## 5 | Reschedule pods to another node
+## 5 - Reschedule pods to another node
 
 ```
 kubectl cordon node01
@@ -153,14 +153,23 @@ kubectl drain node01 --ignore-daemonsets
 ```
 
 
-## 6 | PV, PVC, Deployment
+## 6 - PV, PVC, Deployment
+
+## 6.1 
+
+Create a PV (hostPath), a PVC, a depl / pod to mount it
+
+## 6.2 
+
+Create a PVC of an existing StorageClass
 
 
-## 7 | Pod exposure through Node Port
+
+## 7 - Pod exposure through Node Port
 
 
 
-## 8 | DaemonSet (on all nodes incl. controlplane)
+## 8 - DaemonSet (on all nodes incl. controlplane)
 
 ### 8.1 DaemonSet
 
@@ -189,7 +198,7 @@ See: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-con
 
 
 
-## 9 | Network Policy
+## 9 - Network Policy
 
 ### 9.1 scenario
 
@@ -206,7 +215,7 @@ For namespace ns1, allow only connection towards "db" pods in the namespace ns2 
 
 
 
-## 10 | Role, RoleBinding, ServiceAccount
+## 10 - Role, RoleBinding, ServiceAccount
 
 Create a new ServiceAccount (or user) processor in Namespace project-hamster.
 Create a Role and RoleBinding, both named processor as well.
@@ -221,7 +230,7 @@ kubectl auth can-i create secret -n project-hamster --as system:serviceaccount:p
 ---
 
 
-## .kube/config contexts
+## 11 - .kube/config contexts
 
 Show current context with usage of kubectl and without;
 show all contexts
@@ -233,12 +242,12 @@ kubectl config use-context my-dev-cluster
 ```
 
 
-## Schedule a port on a controlplane
+## 12 - Schedule a port on a controlplane
 
 
 
 
-## Ingress two services
+## 13 - Ingress two services
 
 ### with domain.name
 expose two services on domain.name/one and domain.name/two
@@ -251,14 +260,14 @@ Verify from the internal IP using curl -kL ip:port/path
 
 
 
-## Run a pod with image xyz and secrets/configmaps mounted or used as a env
+## 14 - Run a pod with image xyz and secrets/configmaps mounted or used as a env
 
 create one (or two) secrets, create a pod, edit it's yaml
 
 
 
 
-## Review / Verify Certificates, Valid dates etc.
+## 15 - Review / Verify Certificates, Valid dates etc.
 
 ```
 kubeadm certs check-expiration
@@ -276,11 +285,11 @@ openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet.crt |grep -A2 Valid
 
 
 
-## One pod with 3 containers, same storage (not PV)
+## 16 - One pod with 3 containers, same storage (not PV)
 
 
 
-## add a sidecar container
+## 17 - add a sidecar container
 
 Add a sidecar container to the existing pod. It should read and output the logs from the original container. 
 Add a non-persistent volume for the log folder and use it in both containers.
@@ -288,13 +297,13 @@ Add a non-persistent volume for the log folder and use it in both containers.
 
 
 
-## Pod with ReadinessProbe / LivenessProbe
+## 18 -  Pod with ReadinessProbe / LivenessProbe
 
 see docs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 
 
 
-## HPA horizontal pod autoscale
+## 19 - HPA horizontal pod autoscale
 
 create an HPA for deployment XYZ 
 
@@ -307,7 +316,7 @@ Note: in real life the pods must have the cpu request / limit set, so the hpa ca
 
 
 
-## cluster events / sorting output
+## 20 - cluster events / sorting output
 
 
 ```
@@ -319,7 +328,7 @@ k get events -A --sort-by=.metadata.creationTimestamp
 
 
 
-## metrics
+## 21 - metrics
 
 ```
 k top po --containers -A
@@ -329,7 +338,7 @@ k top no
 
 
 
-## k8s components overview
+## 22 - k8s components overview
 
 What is running as pod, as service, static-pod ?
 
@@ -337,7 +346,7 @@ What CNI driver is installed and where it's config?
 
 
 
-## Manual scheduling
+## 23 - Manual scheduling
 
 
 stop scheduler:
@@ -354,7 +363,7 @@ mv /root/kube-scheduler.yaml /etc/kubernetes/manifests/
 
 
 
-## scaling up / down a deployment
+## 24 - scaling up / down a deployment
 
 Straight-forward:
 

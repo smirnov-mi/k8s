@@ -321,6 +321,8 @@ Note: in real life the pods must have the cpu request / limit set, so the hpa ca
 
 ## 20 - cluster events / sorting output
 
+Display events or pods sorted by creation time.
+
 
 ```
 k get po -A  --sort-by=.metadata.creationTimestamp
@@ -333,10 +335,12 @@ k get events -A --sort-by=.metadata.creationTimestamp
 
 ## 21 - metrics
 
-```
-k top po --containers -A
+Display usage by nodes; by pods AND it's containers
 
+```
 k top no
+
+k top po --containers -A
 ```
 
 

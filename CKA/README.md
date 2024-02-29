@@ -1,7 +1,7 @@
 # A summary of the most relevant CKA subjects
 
-I recently prepared myself for a CKA certification. 
-I used a lot of different sources, a lot of great youtube videos, 
+I recently mastered the CKA certification (Febr. 2024).
+I used a lot of different sources for learning, a lot of great youtube videos, 
 some online collections and official training env. by killer.sh
 
 
@@ -17,7 +17,7 @@ e.g. you are not allowed to use any assistance (person) or documentation other t
 you are allowed to take a 15 min break.
 
 
-Practice on [Killercoda](https://killercoda.com/killer-shell-cka) environment.
+Practice on [Killercoda](https://killercoda.com/killer-shell-cka) environment (it's free).
 
 Try to memorize as much as you can, as the exam adds stress and adrenaline, 
 the environment is not fast, copy-paste is not perfect, 
@@ -28,7 +28,7 @@ you would be glad you KNOW how to do stuff instead of searching through the docu
  
 
 
-## 1 - Cluster (or one Node) upgrade to a specific version
+## 1 - Cluster (or one Node) upgrade to a specific k8s version
 
 Upgrading a controlplane, worker node or the whole cluster to a **specific** k8s version.
 
@@ -44,7 +44,7 @@ apt-cache madison kubeadm
 
 Drain the node
 
-update kubeadm
+update kubeadm to the version asked
 ```
 apt-get install -y kubeadm='1.29.x-*'
 ```
@@ -56,16 +56,18 @@ First controlplane:
 ```
 kubeadm upgrade plan
 
-kubeadm upgrade apply v1.29.2
+kubeadm upgrade apply v1.29.2 #just use over version if asked
 ```
+
 This might take a few minutes, follow the instructions then, e.g.
 
 [upgrade/kubelet] Now that your control plane is upgraded, please proceed with upgrading your kubelets if you haven't already done so.
 
 ### Upgrade other control nodes
 
-...
+Same but without the "kubeadm upgrade plan"
 
+Then upgrade the worker nodes.
 
 ### Upgrade worker nodes
 
@@ -136,6 +138,7 @@ kubeadm join 172.30.1.2:6443 --token d5115h.d4uap9x5z0pdncf4 --discovery-token-c
 ```
 
 
+
 ## 4 - Troubleshoot (kubelet)
 
 service not running, mostly because the conf. is wrong and/or kubelet binary is misplaced
@@ -167,22 +170,27 @@ Create a PVC of an existing StorageClass
 
 ## 7 - Pod exposure through Node Port
 
+kubectl expose pod1 --port=80 --type=NodePort
+
+
+then edit the service, if a spec. nodeport is required.
+
 
 
 ## 8 - DaemonSet (on all nodes incl. controlplane)
 
 ### 8.1 DaemonSet
 
-Use Namespace project-tiger for the following.
+Use Namespace ns8 for the following.
 Create a DaemonSet named ds-important with image httpd:2.4-alpine
- and labels id=ds-important and uuid=18426a0b-5f59-4e10-923f-c0e078e82462. 
-The Pods it creates should request 10 millicore cpu and 10 mebibyte memory. 
+ and labels id=ds-important and uuid=0b-59-41-93-c008.
+The Pods it creates should request 15 millicore cpu and 15 mebibyte memory. 
 The Pods of that DaemonSet should run on all nodes, also controlplanes.
 
 ### 8.2 Deployment on all nodes
 
-Use Namespace project-tiger for the following. 
-Create a Deployment named deploy-important with label id=very-important 
+Use Namespace ns8 for the following. 
+Create a Deployment named depl-imp with label id=very-imp 
 (the Pods should also have this label) and 3 replicas. 
 It should contain two containers, the first named container1 with image nginx:1.17.6-alpine 
 and the second one named container2 with image google/pause.
@@ -242,7 +250,7 @@ kubectl config use-context my-dev-cluster
 ```
 
 
-## 12 - Schedule a port on a controlplane
+## 12 - Schedule a pod on a controlplane
 
 
 
@@ -250,7 +258,7 @@ kubectl config use-context my-dev-cluster
 ## 13 - Ingress two services
 
 ### with domain.name
-expose two services on domain.name/one and domain.name/two
+expose two services on: domain.name/one and domain.name/two
 
 
 ### without

@@ -370,7 +370,9 @@ mv /root/kube-scheduler.yaml /etc/kubernetes/manifests/
 
 
 
-## 24 - scaling up / down a deployment
+## 24 - Changing an existing deployment
+
+### 24.1 scale-up / -down a deployment / replicaset
 
 Straight-forward:
 
@@ -378,6 +380,16 @@ Straight-forward:
 k scale deployment depl1 --replicas=3
 ```
 
+### 24.2 change the image of the existing deployment/rs
+
+```
+# find the names/images:
+k get -n ns deploy depl1 -o yaml |egrep -i "name|image"
+
+# set a new image:
+k set -n ns image deployment depl-name container-name=newimage
+
+```
 
 ## 25 - Pods with PriorityClass
 

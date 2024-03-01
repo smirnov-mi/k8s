@@ -220,7 +220,9 @@ For namespace ns2, allow pods "service" in namespace ns1 only access pods "db" i
 
 For namespace ns1, allow only connection towards "db" pods in the namespace ns2 to port 1234
 
+### see also
 
+https://kubernetes.io/docs/concepts/services-networking/network-policies/
 
 
 ## 10 - Role, RoleBinding, ServiceAccount
@@ -409,5 +411,8 @@ priorityClass, priority pods, usage
 
 Adding an init container to an existing pod.
 
+
+
+## 27 - Cronhobs
 
 

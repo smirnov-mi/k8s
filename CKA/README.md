@@ -149,7 +149,7 @@ I only had to "systemctl restart kubelet".
 
 
 ## 5 - Reschedule pods to another node
-
+ it's cordon and drain the node. 
 ```
 kubectl cordon node01
 kubectl drain node01 --ignore-daemonsets 

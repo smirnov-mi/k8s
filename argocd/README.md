@@ -4,7 +4,12 @@
 
 2024.03.09 - v. 6.2.3
 
-only default namespace possible :-(
+check for old installations (old CRDs) and remove them:
+
+```
+kubectl api-resources  | grep -i argo
+```
+
 
 
 see rancher-values.yaml for Ingress etc.

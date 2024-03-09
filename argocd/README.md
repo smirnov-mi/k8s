@@ -7,4 +7,12 @@
 
 see rancher-values.yaml for Ingress etc.
 
- 
+
+init. admin password:
+
+```
+kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+
+
+

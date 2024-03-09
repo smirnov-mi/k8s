@@ -1,8 +1,10 @@
 # Argo CD
 
-## installation via RAncher - Apps
+## installation via Rancher - Apps
 
 2024.03.09 - v. 6.2.3
+
+only default namespace possible :-(
 
 
 see rancher-values.yaml for Ingress etc.

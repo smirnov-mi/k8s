@@ -22,4 +22,8 @@ kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.pa
 ```
 
 
+For more details see:
+
+https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#ingress-configurationh
+
 

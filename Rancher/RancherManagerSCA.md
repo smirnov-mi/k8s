@@ -112,8 +112,9 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
            NeuVector (It provides container security on multiple layers) 
 	
 	11 Rancher Manager 2.7 for Rancher Prime Operations: CLI Access for Rancher Manager and Downstream Clusters
-           access cluster nodes with ssh.
-	
+           Access cluster nodes with ssh.
+           Access a downstream cluster with kubectl.	
+
 	12 Rancher Manager 2.7 for Rancher Prime Operations: Backup and Restore with Rancher Manager
 	
 	13 Rancher Manager 2.7 for Rancher Prime Operations: Course Feedback

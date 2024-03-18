@@ -106,8 +106,13 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 	09 Rancher Manager 2.7 for Rancher Prime Operations: Rancher Manager Extensions
 	
 	10 Rancher Manager 2.7 for Rancher Prime Operations: Security Tools with Rancher Manager
+           CIS (Which of the following are CIS scan types in Rancher Manager?)
+           OPA (uses polici to allow or deny requests)
+           Kubewarden (A policy engine for Kubernetes)
+           NeuVector (It provides container security on multiple layers) 
 	
 	11 Rancher Manager 2.7 for Rancher Prime Operations: CLI Access for Rancher Manager and Downstream Clusters
+           access cluster nodes with ssh.
 	
 	12 Rancher Manager 2.7 for Rancher Prime Operations: Backup and Restore with Rancher Manager
 	

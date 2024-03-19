@@ -27,7 +27,7 @@ you would be glad you KNOW how to do stuff instead of searching through the docu
 
 ## Objectives
 
-
+27.02.2024
 <details>
 
 ```
@@ -77,7 +77,6 @@ Choose an appropriate container network interface plugin
 </details>
 
 
-28.02.2024
  
 
 
@@ -85,6 +84,7 @@ Choose an appropriate container network interface plugin
 
 Upgrading a controlplane, worker node or the whole cluster to a **specific** k8s version.
 
+<details>
 
 Use documentation: [k8s upgrade](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
 
@@ -138,7 +138,10 @@ Upgrade kubelet and kubectl
 Uncordon the node
 
 
-
+  <summary>
+  Solution
+  </summary>
+</details>
 
 
 
@@ -152,9 +155,10 @@ Then create any kind of Pod in the cluster.
 Finally restore the backup, confirm the cluster is still working and that the created Pod is no longer with us.
 
 
-See docs: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
 <details>
+
+See docs: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
 **get facts** (cert, ca, key)
 ```
@@ -185,7 +189,9 @@ ETCDCTL_API=3 etcdctl --cert=/etc/kubernetes/pki/etcd/server.crt \
 
 ## 3 - Join Node to the cluster
 
-Add a new node to a cluster. You can use the Killercoda CKA playground and delete a node01 first:
+Add a new node to a cluster. 
+
+You can use the Killercoda CKA playground and delete a node01 first:
 ```
 k drain node01 --ignore-daemonsets
 k delete node node01
@@ -217,6 +223,7 @@ service not running, mostly because the conf. is wrong and/or kubelet binary is 
 
 I only had to "systemctl restart kubelet".
 
+Other scenarios can involve misspelled paths in kubelet.conf and moved or renamed  binary
 
 
 

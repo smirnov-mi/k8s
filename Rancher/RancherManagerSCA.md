@@ -114,8 +114,30 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 	11 Rancher Manager 2.7 for Rancher Prime Operations: CLI Access for Rancher Manager and Downstream Clusters
            Access cluster nodes with ssh.
            Access a downstream cluster with kubectl.	
+           Rancher Manager API
+           Rancher Manager CLI
+
+           ---
+           Q: What is the purpose of Authorized Cluster Endpoint?
+           A: It authenticates requests and forwards them to downstream Kubernetes cluster API.
+
+           Q: How does Rancher CLI communicate with Rancher Manager?
+           A: It provides a bearer token to the cluster API with the request.
+
+           Q: Which of the following parameters is required for kubectl if a downstream cluster needs to be communicated with without Rancher Manager’s Authentication Proxy?
+           A: --context <CONTEXT_NAME>
+
+           Q: Where can you get Rancher CLI for Linux?
+           A: Download a tar ball from Rancher Manager UI
+
+
 
 	12 Rancher Manager 2.7 for Rancher Prime Operations: Backup and Restore with Rancher Manager
+           Backup Requirements with Rancher Manager
+           Downstream Cluster Snapshots
+           Upgrade Downstream Clusters
+           Restore Downstream Clusters
+           Backup and Restore Rancher Manager 
 	
 	13 Rancher Manager 2.7 for Rancher Prime Operations: Course Feedback
 	

@@ -27,7 +27,11 @@ you would be glad you KNOW how to do stuff instead of searching through the docu
 
 ## Objectives
 
+
+<details>
+
 ```
+
 Storage (10%)
 Understand storage classes, persistent volumes
 Understand volume mode, access modes and reclaim policies for volumes
@@ -67,7 +71,10 @@ Know how to configure and use CoreDNS
 Choose an appropriate container network interface plugin
 
 ```
-
+  <summary>
+  List of knowledge areas 
+  </summary>
+</details>
 
 
 28.02.2024
@@ -138,10 +145,21 @@ Uncordon the node
 
 ## 2 - ETCD backup and restore
 
+Make a backup of etcd running on cluster3-controlplane1 and save it on the controlplane node at /tmp/etcd-backup.db.
+
+Then create any kind of Pod in the cluster.
+
+Finally restore the backup, confirm the cluster is still working and that the created Pod is no longer with us.
+
+
 See docs: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
 <details>
-**get facts**
+
+**get facts** (cert, ca, key)
+```
+grep etcd /etc/kubernetes/manifests/kube-apiserver.yaml 
+```
 
 **create a snapshot**
 ```
@@ -203,12 +221,20 @@ I only had to "systemctl restart kubelet".
 
 
 ## 5 - Reschedule pods to another node
- it's cordon and drain the node. 
+
+
+<details>
+
+it's cordon and drain the node. 
+
 ```
 kubectl cordon node01
 kubectl drain node01 --ignore-daemonsets 
 ```
-
+  <summary>
+  Solution
+  </summary>
+</details>
 
 ## 6 - PV, PVC, Deployment
 
@@ -301,6 +327,8 @@ show all contexts
 
 ```
 kubectl config get-contexts -o=name
+
+grep ontext ~/.kube/config ....
 
 kubectl config use-context my-dev-cluster
 ```

@@ -24,6 +24,52 @@ the environment is not fast, copy-paste is not perfect,
 you would be glad you KNOW how to do stuff instead of searching through the documentation.
 
 
+
+## Objectives
+
+```
+Storage (10%)
+Understand storage classes, persistent volumes
+Understand volume mode, access modes and reclaim policies for volumes
+Understand persistent volume claims primitive
+Know how to configure applications with persistent storage
+
+Troubleshooting (30%)
+Evaluate cluster and node logging
+Understand how to monitor applications
+Manage container stdout & stderr logs
+Troubleshoot application failure
+Troubleshoot cluster component failure
+Troubleshoot networking
+
+Workloads & Scheduling (15%)
+Understand deployments and how to perform rolling update and rollbacks
+Use ConfigMaps and Secrets to configure applications
+Know how to scale applications
+Understand the primitives used to create robust, self-healing, application deployments
+Understand how resource limits can affect Pod scheduling
+Awareness of manifest management and common templating tools
+
+Cluster Architecture, Installation & Configuration (25%)
+Manage role based access control (RBAC)
+Use Kubeadm to install a basic cluster
+Manage a highly-available Kubernetes cluster
+Provision underlying infrastructure to deploy a Kubernetes cluster
+Perform a version upgrade on a Kubernetes cluster using Kubeadm
+Implement etcd backup and restore
+
+Services & Networking (20%)
+Understand host networking configuration on the cluster nodes
+Understand connectivity between Pods
+Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
+Know how to use Ingress controllers and Ingress resources
+Know how to configure and use CoreDNS
+Choose an appropriate container network interface plugin
+
+```
+
+
+
 28.02.2024
  
 
@@ -94,6 +140,7 @@ Uncordon the node
 
 See docs: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
+<details>
 **get facts**
 
 **create a snapshot**
@@ -110,7 +157,10 @@ ETCDCTL_API=3 etcdctl --cert=/etc/kubernetes/pki/etcd/server.crt \
 
 **move all yamls back**
 
-
+  <summary>
+  Solution
+  </summary>
+</details>
 
 
 
@@ -123,7 +173,7 @@ k drain node01 --ignore-daemonsets
 k delete node node01
 ```
 
-Solution:
+<details>
 
 first create a join token on a controlplane
 ```
@@ -136,6 +186,10 @@ Then execute the printed command on a new node (additional actions listed below 
 
 kubeadm join 172.30.1.2:6443 --token d5115h.d4uap9x5z0pdncf4 --discovery-token-ca-cert-hash sha256:6e41de7a00c20668116b3808d6b411e022e07e6cb6de0130067ac1a8c321d34a #--ignore-preflight-errors=Port-10250
 ```
+  <summary>
+  Solution
+  </summary>
+</details>
 
 
 
@@ -254,7 +308,37 @@ kubectl config use-context my-dev-cluster
 
 ## 12 - Schedule a pod on a controlplane
 
+### 12.1 nodeName
 
+```
+spec:
+  nodeName: controlplane
+```
+
+
+### 12.2 add tolerations
+
+describe the control node, look for taints, then add tolerations to the pod/depl spec
+
+```
+# show nodes with taints (incl their taints)
+kubectl get nodes -o jsonpath='{.items[*].spec.taints}'
+
+#or 
+kubectl get no
+kubectl describe no CONTROLPLANE -o yaml |grep -A5 Taints
+```
+
+```
+spec:
+  tolerations:
+  - key: node-role.kubernetes.io/controlplane
+    operator: Exists
+    effect: NoSchedule
+  - key: node-role.kubernetes.io/etcd
+    operator: Exists
+    effect: NoExecute
+```
 
 
 ## 13 - Ingress two services
@@ -343,7 +427,7 @@ k get events -A --sort-by=.metadata.creationTimestamp
 
 
 
-## 21 - metrics
+## 21 - metrics / resource usage
 
 Display usage by nodes; by pods AND it's containers
 
@@ -355,9 +439,9 @@ k top po --containers -A
 
 
 
-## 22 - k8s components overview
+## 22 - k8s components overview / informationw
 
-What is running as pod, as service, static-pod ?
+Which components run as pod, as service, static-pod ?
 
 What CNI driver is installed and where it's config?
 
@@ -365,8 +449,10 @@ What CNI driver is installed and where it's config?
 
 ## 23 - Manual scheduling
 
+Requires a non RKE cluster.
 
-stop scheduler:
+
+Kill / stop scheduler:
 ```
 mv /etc/kubernetes/manifests/kube-scheduler /root/
 ```
@@ -413,6 +499,6 @@ Adding an init container to an existing pod.
 
 
 
-## 27 - Cronhobs
+## 27 - Cronjobs
 
 

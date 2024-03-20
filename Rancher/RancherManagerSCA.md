@@ -104,7 +104,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	03 Rancher Manager 2.7 for Rancher Prime Operations: Cluster Management with Rancher Manager
            Rancher Manager User Interface
@@ -119,7 +119,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 		
 	04 Rancher Manager 2.7 for Rancher Prime Operations: User Management with Rancher Manager
 		
@@ -129,7 +129,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	05 Rancher Manager 2.7 for Rancher Prime Operations: Cluster and Node Management with Rancher Manager
 		
@@ -139,7 +139,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	06 Rancher Manager 2.7 for Rancher Prime Operations: Application Management with Rancher Manager
 	
@@ -149,7 +149,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 		
 	07 Rancher Manager 2.7 for Rancher Prime Operations: Continuous Delivery with Rancher Manager
 	
@@ -159,7 +159,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	08 Rancher Manager 2.7 for Rancher Prime Operations: Logging and Monitoring with Rancher Manager
 	
@@ -169,7 +169,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	09 Rancher Manager 2.7 for Rancher Prime Operations: Rancher Manager Extensions
 	
@@ -179,7 +179,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	
 	10 Rancher Manager 2.7 for Rancher Prime Operations: Security Tools with Rancher Manager
            CIS (Which of the following are CIS scan types in Rancher Manager?)
@@ -192,7 +192,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
   </summary>
 
    
-  <details>
+  </details>
 	  
 	11 Rancher Manager 2.7 for Rancher Prime Operations: CLI Access for Rancher Manager and Downstream Clusters
            Access cluster nodes with ssh.

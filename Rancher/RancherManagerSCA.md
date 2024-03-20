@@ -13,8 +13,8 @@ https://www.suse.com/training/exam/sca-rancher-2-7/
 
 
 
-Detailed Objectives
 
+<details>
     Rancher Manager Architecture 
     Access Rancher Manager 
     Rancher Manager User Interface 
@@ -54,7 +54,10 @@ Detailed Objectives
     Upgrade Downstream Clusters 
     Restore Downstream Clusters 
     Backup and Restore Rancher Manager  
-
+  <summary>
+  Detailed Objectives
+  </summary>
+</details>
 
 ## eLearning Suse
 
@@ -90,8 +93,17 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 	01 Rancher Manager 2.7 for Rancher Prime Operations: Course Overview (Internal/Partner)
 	
 	02 Rancher Manager 2.7 for Rancher Prime Operations: Introduction to Rancher Manager for Rancher Prime
+           An understanding of the overall Rancher Manager product
+           An awareness of the product architecture
+           Familiarity with major changes beginning with the Rancher Manager 2.7.2 release
+           An understanding of the differences between the community release and the Rancher Prime release
 	
 	03 Rancher Manager 2.7 for Rancher Prime Operations: Cluster Management with Rancher Manager
+           Rancher Manager User Interface
+           Cluster and Node Agents
+           Import an Existing Kubernetes Cluster
+           Provision an RKE Cluster on Existing Nodes
+           Provision a K3s or RKE2 Cluster on Existing Nodes 
 	
 	04 Rancher Manager 2.7 for Rancher Prime Operations: User Management with Rancher Manager
 	

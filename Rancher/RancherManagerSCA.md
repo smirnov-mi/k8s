@@ -88,7 +88,7 @@ Date: 2023-08-31SUSE Internal and Partner
 https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTURE_MANUAL-Rancher_Manager_2.7_for_Rancher_Prime_Operations-LMS.pdf
 
 
-### online training subjects
+### eLearning topics
 
 	01 Rancher Manager 2.7 for Rancher Prime Operations: Course Overview 
 	
@@ -97,6 +97,14 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
            An awareness of the product architecture
            Familiarity with major changes beginning with the Rancher Manager 2.7.2 release
            An understanding of the differences between the community release and the Rancher Prime release
+		
+  <details>
+  <summary>
+  2 Quiz
+  </summary>
+
+   
+  <details>
 	
 	03 Rancher Manager 2.7 for Rancher Prime Operations: Cluster Management with Rancher Manager
            Rancher Manager User Interface
@@ -105,36 +113,98 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
            Provision an RKE Cluster on Existing Nodes
            Provision a K3s or RKE2 Cluster on Existing Nodes 
 	
+  <details>
+  <summary>
+  3 Quiz
+  </summary>
+
+   
+  <details>
+		
 	04 Rancher Manager 2.7 for Rancher Prime Operations: User Management with Rancher Manager
+		
+  <details>
+  <summary>
+  4 Quiz
+  </summary>
+
+   
+  <details>
 	
 	05 Rancher Manager 2.7 for Rancher Prime Operations: Cluster and Node Management with Rancher Manager
+		
+  <details>
+  <summary>
+  5 Quiz
+  </summary>
+
+   
+  <details>
 	
 	06 Rancher Manager 2.7 for Rancher Prime Operations: Application Management with Rancher Manager
 	
+  <details>
+  <summary>
+  6 Quiz
+  </summary>
+
+   
+  <details>
+		
 	07 Rancher Manager 2.7 for Rancher Prime Operations: Continuous Delivery with Rancher Manager
+	
+  <details>
+  <summary>
+  7 Quiz
+  </summary>
+
+   
+  <details>
 	
 	08 Rancher Manager 2.7 for Rancher Prime Operations: Logging and Monitoring with Rancher Manager
 	
+  <details>
+  <summary>
+  8 Quiz
+  </summary>
+
+   
+  <details>
+	
 	09 Rancher Manager 2.7 for Rancher Prime Operations: Rancher Manager Extensions
+	
+ <details>
+  <summary>
+  9 Quiz
+  </summary>
+
+   
+  <details>
 	
 	10 Rancher Manager 2.7 for Rancher Prime Operations: Security Tools with Rancher Manager
            CIS (Which of the following are CIS scan types in Rancher Manager?)
            OPA (uses polici to allow or deny requests)
            Kubewarden (A policy engine for Kubernetes)
            NeuVector (It provides container security on multiple layers) 
-	
+  <details>
+  <summary>
+  10 Quiz
+  </summary>
+
+   
+  <details>
+	  
 	11 Rancher Manager 2.7 for Rancher Prime Operations: CLI Access for Rancher Manager and Downstream Clusters
            Access cluster nodes with ssh.
            Access a downstream cluster with kubectl.	
            Rancher Manager API
            Rancher Manager CLI
 
-           ---
-
-<details>
+  <details>
   <summary>
   11 Quiz
   </summary>
+	
            Q: What is the purpose of Authorized Cluster Endpoint?
            A: It authenticates requests and forwards them to downstream Kubernetes cluster API.
 
@@ -146,7 +216,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 
            Q: Where can you get Rancher CLI for Linux?
            A: Download a tar ball from Rancher Manager UI
-</details>
+  </details>
 
 
 
@@ -157,6 +227,16 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
            Restore Downstream Clusters
            Backup and Restore Rancher Manager 
 	
+	
+  <details>
+  <summary>
+  12 Quiz
+  </summary>
+  
+  
+  </details>
+  
+	  
 	13 Rancher Manager 2.7 for Rancher Prime Operations: Course Feedback
 	
 

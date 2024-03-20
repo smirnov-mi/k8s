@@ -90,7 +90,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 
 ### online training subjects
 
-	01 Rancher Manager 2.7 for Rancher Prime Operations: Course Overview (Internal/Partner)
+	01 Rancher Manager 2.7 for Rancher Prime Operations: Course Overview 
 	
 	02 Rancher Manager 2.7 for Rancher Prime Operations: Introduction to Rancher Manager for Rancher Prime
            An understanding of the overall Rancher Manager product
@@ -130,6 +130,11 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
            Rancher Manager CLI
 
            ---
+
+<details>
+  <summary>
+  11 Quiz
+  </summary>
            Q: What is the purpose of Authorized Cluster Endpoint?
            A: It authenticates requests and forwards them to downstream Kubernetes cluster API.
 
@@ -141,6 +146,7 @@ https://links.imagerelay.com/cdn/3404/ql/8ee9b1abd82243b9b12ffec6a3d4aade/LECTUR
 
            Q: Where can you get Rancher CLI for Linux?
            A: Download a tar ball from Rancher Manager UI
+</details>
 
 
 

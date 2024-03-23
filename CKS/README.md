@@ -48,7 +48,8 @@ CNI
 
 non-namespaced, access via certs
 
-3:07:00 - hands-on !
+3:07:00 
+3:21:00 - hands-on !
 
 
 ## RBAC / ServiceAccounts

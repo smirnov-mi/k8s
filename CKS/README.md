@@ -48,12 +48,12 @@ CNI
 
 non-namespaced, access via certs
 
-3:20:00 
+3:07:00 - hands-on !
 
 
 ## RBAC / ServiceAccounts
 
-namespaced, created in Kube-api, access via token
+3:30:00 namespaced, created in Kube-api, access via token
 
 
 

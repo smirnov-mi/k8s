@@ -83,3 +83,8 @@ non-namespaced, access via certs
 5:26:00 
 
 
+# Another CKS playlist
+
+https://m.youtube.com/watch?v=jvmShTBSBoA&list=PLFkEchqXDZx6Bw3B2NRVc499j1TavjOvm&pp=iAQB
+
+

@@ -1,3 +1,13 @@
+# Rancher by Suse Quickstart
+
+see https://github.com/rancher/quickstart for examples,
+
+we use a simple docker installation on Hetzner VM: 
+https://github.com/smirnov-mi/how-to/tree/main/rancher
+
+
+
+
 #   SUSE Rancher Certification
 
 

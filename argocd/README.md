@@ -1,13 +1,11 @@
 # Argo CD
 
-## latest
-
-21.3.2024:  updated 6.2.3 -> 6.7.2 (Rancher WebGUI, Apps installed -> update, no customizing.)
-
+Prereq. DNS name for web-interface
 
  
 ## installation via Rancher - Apps
 
+**1.4.2024** - 6.2.3 (with values saved), then update to 6.7.3
 2024.03.09 - v. 6.2.3
 
 check for old installations (old CRDs) and remove them:
@@ -17,8 +15,9 @@ kubectl api-resources  | grep -i argo
 ```
 
 
+See rancher-values.yaml for Ingress etc.
 
-see rancher-values.yaml for Ingress etc.
+
 
 
 init. admin password:

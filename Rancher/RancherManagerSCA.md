@@ -15,6 +15,7 @@ https://www.suse.com/training/exam/sca-rancher-2-7/
 
 
 <details>
+	
     Rancher Manager Architecture 
     Access Rancher Manager 
     Rancher Manager User Interface 

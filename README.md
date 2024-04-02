@@ -21,4 +21,9 @@ you can combine them into one file and use context then.
 see also: https://devopscube.com/kubernetes-kubeconfig-file/
 
 
+### Cronjobs & Sidecar in 1.28+
+
+Kubernetes jobs https://medium.com/teamsnap-engineering/properly-running-kubernetes-jobs-with-sidecars-in-2024-k8s-1-28-ad9b51d17d50
+
+
 

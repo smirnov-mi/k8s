@@ -27,3 +27,12 @@ Kubernetes jobs https://medium.com/teamsnap-engineering/properly-running-kuberne
 
 
 
+### HELM
+
+Helm charts training:
+ 
+https://m.youtube.com/watch?v=EbgwXCTVN1o&list=PLSwo-wAGP1b8svO5fbAr7ko2Buz6GuH1g&index=12
+
+
+
+

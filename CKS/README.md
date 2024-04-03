@@ -44,12 +44,20 @@ CNI
 2:34:19
 
 
+
+## Verifying platform binaries
+
+2:48:00 
+
+
+
+
 ## RBAC / Users
 
 non-namespaced, access via certs
 
 3:07:00 
-3:21:00 - hands-on !
+3:21:00 - hands-on
 
 
 ## RBAC / ServiceAccounts
@@ -64,19 +72,15 @@ non-namespaced, access via certs
 
 
 
-3:30:00  
 
 
-
-
-## Verifying platform binaries
-
-2:48:00 
 
 
 ## Secrets, encryption
 
-05:00:00 
+04:39:00   
+
+05:00:00 - encryption
 
 
 ## Container Runtime Sandboxes

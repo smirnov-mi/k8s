@@ -24,4 +24,14 @@ LC_ALL="en_US.UTF-8"
 
 https://github.com/cuza/rancher-ui-driver-proxmoxve
 
+## Terraform
+
+### install tf on mac:
+
+```
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
+https://developer.hashicorp.com/terraform/install
+
 

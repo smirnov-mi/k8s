@@ -57,4 +57,41 @@ in the command line run:
 
 https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/use-answer-files-with-sysprep?view=windows-11
 
+https://pve.proxmox.com/wiki/Windows_2012_guest_best_practices
+
+https://www.thomas-krenn.com/de/wiki/Sysprep_f%C3%BCr_Windows_10/11_und_Windows_Server_2022
+
+...
+
+## create an ISO on PVE server
+
+create a config file on the PVE server, then convert it into an ISO image, and place into the ISO storage location, e.g.
+
+
+```
+-rw-r--r-- 1 root root          8 Apr 19 21:36 windows-1-config.ini
+
+root@pve:/var/lib/vz/template/iso# mkisofs -J -l -R -V "Label CD" -iso-level 4 -o windows-srv1.iso windows-1-config.ini
+Warning: Creating ISO-9660:1999 (version 2) filesystem.
+Warning: ISO-9660 filenames longer than 31 may cause buffer overflows in the OS.
+Total translation table size: 0
+Total rockridge attributes bytes: 261
+Total directory bytes: 0
+Path table size(bytes): 10
+Max brk space used 0
+183 extents written (0 MB)
+root@pve:/var/lib/vz/template/iso# ll
+total 5539436
+-rw-r--r-- 1 root root     374784 Apr 19 21:41 output.iso
+-rw-r--r-- 1 root root  627519488 Apr 19 09:00 virtio-win-0.1.240.iso
+-rw-r--r-- 1 root root 5044094976 Apr 19 11:18 W2022_SERVER_EVAL_x64FRE_en-us.iso
+-rw-r--r-- 1 root root          8 Apr 19 21:36 windows-1-config.ini
+-rw-r--r-- 1 root root     374784 Apr 19 21:42 windows-srv1.iso
+
+```
+
+it will be shown in the local ISO location of the PVE server
+
+
+
 

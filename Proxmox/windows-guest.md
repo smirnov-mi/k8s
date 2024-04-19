@@ -52,3 +52,9 @@ in the command line run:
     %WINDIR%\system32\sysprep\sysprep.exe /generalize /shutdown /oobe
 
 
+
+## Sysprep and Answer-file
+
+https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/use-answer-files-with-sysprep?view=windows-11
+
+

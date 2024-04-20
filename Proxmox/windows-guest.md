@@ -55,11 +55,17 @@ in the command line run:
 
 ## Sysprep and Answer-file
 
-https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/use-answer-files-with-sysprep?view=windows-11
+*->* https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/use-answer-files-with-sysprep?view=windows-11
+
+https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep-process-overview?view=windows-11
+
 
 https://pve.proxmox.com/wiki/Windows_2012_guest_best_practices
 
 https://www.thomas-krenn.com/de/wiki/Sysprep_f%C3%BCr_Windows_10/11_und_Windows_Server_2022
+
+cloud-init howto: https://forum.proxmox.com/threads/how-to-create-windows-cloudinit-templates-on-proxmox-7-3-patch-included.123338/
+
 
 ...
 

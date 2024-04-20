@@ -34,6 +34,20 @@ LC_ALL="en_US.UTF-8"
 ```
 
 
+## System Update / Upgrades
+
+IF running a cluser, free up the node first,
+only upgrade one node at a time
+
+	# Paketquellen Updaten
+	apt update
+
+	# Pakete installieren
+	apt dist-upgrade
+
+	# Reboot the server
+	systemctl reboot 
+
 
 
 ## Terraform

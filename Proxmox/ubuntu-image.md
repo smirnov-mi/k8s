@@ -1,5 +1,14 @@
 # Proxmox prepare Ubuntu image and template
 
+
+based on: 
+
+https://www.thomas-krenn.com/de/wiki/Terraform_mit_Proxmox_VE_Tutorial
+
+https://github.com/Telmate/terraform-provider-proxmox/blob/master/docs/resources/vm_qemu.md
+
+
+
 ## get and prepare the image
 
 pve>
@@ -34,4 +43,7 @@ qm resize 9001 scsi0 3G &&
 qm template 9001
 ```
 
+
+
+create provider.tf and server.tf see how-to
 

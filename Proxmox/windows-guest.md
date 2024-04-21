@@ -59,6 +59,7 @@ in the command line run:
 
 https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep-process-overview?view=windows-11
 
+https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep-command-line-options?view=windows-11
 
 https://pve.proxmox.com/wiki/Windows_2012_guest_best_practices
 

@@ -61,6 +61,12 @@ brew install hashicorp/tap/terraform
 https://developer.hashicorp.com/terraform/install
 
 
+### create a new Token in PVE, add it into your (local PC) env, as e.g.
+```
+PM_API_TOKEN_ID=terraform-provider@pve-server!my-token
+PM_API_TOKEN_SECRET=1c536737-5fe8-2110-b180-1550ab1cXxXx
+```
+
 
 
 ## Rancher driver (TODO)

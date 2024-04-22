@@ -71,6 +71,10 @@ download link (latest beta): https://cloudbase.it/downloads/CloudbaseInitSetup_x
 
 ???
 
+Evaluating this:  https://yetiops.net/posts/proxmox-terraform-cloudinit-windows/
+
+
+
 
 ## Generalize the image (sysprep)
 

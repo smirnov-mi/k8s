@@ -7,6 +7,8 @@ https://www.thomas-krenn.com/de/wiki/Terraform_mit_Proxmox_VE_Tutorial
 
 https://github.com/Telmate/terraform-provider-proxmox/blob/master/docs/resources/vm_qemu.md
 
+https://pve.proxmox.com/wiki/Cloud-Init_Support
+
 
 
 ## get and prepare the image
@@ -44,6 +46,13 @@ qm template 9001
 ```
 
 
+### Setup the Terraform 
 
-create provider.tf and server.tf see how-to
+create [provider.tf](https://github.com/smirnov-mi/how-to/blob/main/proxmox/tf-mc-local/provider.tf) and 
+[sample-server.tf](https://github.com/smirnov-mi/how-to/blob/main/proxmox/tf-mc-local/srv-ubuntu1.tf), 
+see [how-to](https://github.com/smirnov-mi/how-to/tree/main/proxmox/tf-mc-local) and
+
+https://pve.proxmox.com/wiki/Cloud-Init_Support
+
+
 

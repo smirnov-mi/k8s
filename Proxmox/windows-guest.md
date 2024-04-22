@@ -39,9 +39,40 @@ https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers
 
     Choose the drive and continue the steps.
     
-    Change administrator password when prompted. (must not be a trivial, e.g. Admin2022)
+    Change administrator password when prompted. (must not be trivial, e.g. Admin2022)
 
-## Generalize the image
+## Add device drivers
+
+as usual, add device drivers (located on the "virtio" disk). 
+
+
+## Install windows updates (optional)
+
+usual windows software update + reboot
+
+
+## Install cloud-init
+
+https://cloudbase.it/cloudbase-init/#download
+
+download link (latest beta): https://cloudbase.it/downloads/CloudbaseInitSetup_x64.msi
+
+1.1.5dev11 (installed to run as LocalSystem)
+
+
+...
+
+
+(?)
+
+[x] Run sysprep
+[x] Shutdown when done
+
+
+???
+
+
+## Generalize the image (sysprep)
 
 https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11
 

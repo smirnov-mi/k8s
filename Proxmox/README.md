@@ -61,6 +61,22 @@ brew install hashicorp/tap/terraform
 https://developer.hashicorp.com/terraform/install
 
 
+### add a provider
+
+e.g. provider.tf 
+```
+terraform {
+
+        required_providers {
+                proxmox = {
+                        source = "telmate/proxmox"
+                        #version = "2.9.14"
+                        version = "3.0.1-rc1"
+                }
+        }
+}
+```
+
 ### create a new Token in PVE, add it into your (local PC) env, as e.g.
 ```
 PM_API_TOKEN_ID=terraform-provider@pve-server!my-token

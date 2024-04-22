@@ -2,6 +2,8 @@
 
 Nov.2023 based on https://medium.com/@0ka/how-to-install-windows-server-2022-in-proxmox-ve-25aa2e6bdf15
 
+and https://pve.proxmox.com/wiki/Windows_2022_guest_best_practices
+
 ## Download images
 
 ### OS image (180 days free)

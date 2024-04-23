@@ -42,4 +42,12 @@ PM_API_TOKEN_SECRET=1c536737-5fe8-2110-b180-1550ab1cXxXx
 ```
 
 
+### see also 
+
+https://yetiops.net/posts/proxmox-terraform-cloudinit-saltstack-prometheus/#define-an-instance
+
+https://github.com/Telmate/terraform-provider-proxmox/blob/master/docs/index.md
+
+
+
 

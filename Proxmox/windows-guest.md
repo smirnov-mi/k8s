@@ -86,6 +86,10 @@ DONE.
 
 
 
+
+
+
+
 ## Install cloud-init
 
 https://cloudbase.it/cloudbase-init/#download
@@ -94,19 +98,9 @@ download link (latest beta): https://cloudbase.it/downloads/CloudbaseInitSetup_x
 
 1.1.5dev11 (installed to run as LocalSystem)
 
-
-...
-
-
-(?)
-
-[x] Run sysprep
-[x] Shutdown when done
-
-
-???
-
 Evaluating this:  https://yetiops.net/posts/proxmox-terraform-cloudinit-windows/
+
+
 
 
 
@@ -142,6 +136,7 @@ cloud-init howto: https://forum.proxmox.com/threads/how-to-create-windows-cloudi
 
 ...
 
+
 ## create an ISO on PVE server
 
 create a config file on the PVE server, then convert it into an ISO image, and place into the ISO storage location, e.g.
@@ -170,6 +165,13 @@ total 5539436
 ```
 
 it will be shown in the local ISO location of the PVE server
+
+
+
+## Creating ISO via Packer
+
+https://holdmybeersecurity.com/2020/10/03/creating-a-windows-10-64-bit-vm-on-proxmox-with-packer-v1-6-3-and-vault/
+
 
 
 

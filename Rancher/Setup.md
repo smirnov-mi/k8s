@@ -6,6 +6,9 @@ Releases: https://github.com/rancher/rancher/releases
 
 ## single docker setup
 
+https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker
+
+
 ...
 see https://github.com/smirnov-mi/how-to/tree/main/rancher
 

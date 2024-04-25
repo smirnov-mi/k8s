@@ -1,0 +1,57 @@
+#cloud-config
+#
+# this is a could-config file
+# for RKE k8s cluster built on Hetzner hardware/VMs
+#
+# 24.apr.2024 M.Smirnov 'rancher' version.
+
+users:
+  - default
+  - name: muscat
+    gecos: muscat user
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDIsdfs3QvPYMhVRM0byPWeQJllUHtP/4N3bjfdsafdNhpz
+
+chpasswd:
+  list: |
+    root:root
+  expire: false
+
+runcmd:
+
+#fixing 4 DNS entries:
+  - sed -i "/- 2a01:4ff:ff00::add:2/d" /etc/netplan/50-cloud-init.yaml
+  - chmod go-r /etc/netplan/50-cloud-init.yaml
+  - netplan generate
+  - netplan apply
+  - systemctl restart systemd-resolved.service
+
+
+write_files:
+-   content: |
+      /var/log/btmp
+      {
+       su root utmp
+       create 660 root utmp
+       rotate 14
+       daily
+       missingok
+       notifempty
+       compress
+       delaycompress
+       sharedscripts
+       minsize 50M
+       maxage 45
+      }
+    owner: root:root
+    path: /etc/logrotate.d/k8s_host_ubuntu
+    permissions: '0644'
+
+packages:
+- ntp
+- ntpdate
+# required if ceph will be used
+- ceph-common

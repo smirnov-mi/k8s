@@ -2,10 +2,13 @@
 
 Prereq. DNS name for web-interface
 
+Optional: Cert-manager. Can be deployed as ArgoCD app later.
+
  
 ## installation via Rancher - Apps
 
-**1.4.2024** - 6.2.3 (with values saved), then update to 6.7.3
+**26.4.2024** - upd. to 6.7.15
+1.4.2024 - 6.2.3 (with values saved), then update to 6.7.3
 2024.03.09 - v. 6.2.3
 
 check for old installations (old CRDs) and remove them:

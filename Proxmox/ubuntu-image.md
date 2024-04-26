@@ -13,11 +13,22 @@ https://pve.proxmox.com/wiki/Cloud-Init_Support
 
 ## get and prepare the image
 
+Ubuntu 22.04 TLS minimal cloud image:
+
 pve>
 ```
 cd /var/lib/vz/template/iso/ &&
 wget https://cloud-images.ubuntu.com/minimal/releases/jammy/release/ubuntu-22.04-minimal-cloudimg-amd64.img -O /var/lib/vz/template/iso/ubuntu-22.04_minimal_cloud.img
 ```
+
+Ubuntu 24.04 TLS minimal cloud image: 
+
+```
+pve:/var/lib/vz/template/iso# 
+wget https://cloud-images.ubuntu.com/minimal/releases/noble/release/ubuntu-24.04-minimal-cloudimg-amd64.img
+```
+
+
 
 install libguestfs-toos on the PVE server, to be able to modify the image
 ```

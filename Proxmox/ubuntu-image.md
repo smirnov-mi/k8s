@@ -53,12 +53,14 @@ TEMPL_NUM=9004
 
 qm create $TEMPL_NUM --name $TEMPL_NAME --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0 &&
 qm importdisk $TEMPL_NUM $IMAGE local-disk2 &&
-qm set $TEMPL_NUM --scsihw virtio-scsi-pci --scsi0 local-disk2:9001/vm-9001-disk-0.raw &&
+qm set $TEMPL_NUM --scsihw virtio-scsi-pci --scsi0 local-disk2:$TEMPL_NUM/vm-$TEMPL_NUM-disk-0.raw &&
 qm set $TEMPL_NUM --boot c --bootdisk scsi0 &&
 qm set $TEMPL_NUM --ide2 local-disk2:cloudinit &&
 qm set $TEMPL_NUM --serial0 socket --vga serial0 &&
-qm set $TEMPL_NUM --agent enabled=1 &&
-qm resize $TEMPL_NUM scsi0 3G &&
+qm set $TEMPL_NUM --agent enabled=1
+
+#OPTIONAL: qm resize $TEMPL_NUM scsi0 3G       #too little for 24.04, which is 3.5G
+
 qm template $TEMPL_NUM
 ```
 

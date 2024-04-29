@@ -23,8 +23,14 @@ https://developer.hashicorp.com/terraform/install
 
 e.g. provider.tf
 ```
-terraform {
 
+provider "proxmox" {
+        pm_api_url= "https://pve.mc.local:8006/api2/json"
+        pm_tls_insecure = true
+}
+
+# following part should be added into the windows-server.tf:
+terraform {
         required_providers {
                 proxmox = {
                         source = "telmate/proxmox"

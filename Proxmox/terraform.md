@@ -18,6 +18,10 @@ brew install hashicorp/tap/terraform
 ```
 https://developer.hashicorp.com/terraform/install
 
+### install on Windows / Ubuntu 24.04
+
+download an official release package (just a binary)
+
 
 ### add a provider
 

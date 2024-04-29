@@ -18,13 +18,23 @@ brew install hashicorp/tap/terraform
 ```
 https://developer.hashicorp.com/terraform/install
 
+### install on Windows / Ubuntu 24.04
+
+download an official release package (just a binary)
+
 
 ### add a provider
 
 e.g. provider.tf
 ```
-terraform {
 
+provider "proxmox" {
+        pm_api_url= "https://pve.mc.local:8006/api2/json"
+        pm_tls_insecure = true
+}
+
+# following part should be added into the windows-server.tf:
+terraform {
         required_providers {
                 proxmox = {
                         source = "telmate/proxmox"

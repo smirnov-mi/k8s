@@ -50,6 +50,7 @@ virt-customize -a $IMAGE --run-command "echo -n > /etc/machine-id"
 ```
 TEMPL_NAME=ubuntu2404-ci
 TEMPL_NUM=9004
+IMAGE=/var/lib/vz/template/iso/ubuntu-24.04-minimal-cloudimg-amd64.img       #if not set yet
 
 qm create $TEMPL_NUM --name $TEMPL_NAME --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0 &&
 qm importdisk $TEMPL_NUM $IMAGE local-disk2 &&

@@ -47,9 +47,13 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#ingress-config
 - ArgoCD w. private repositories - OK.
 - Create a new git repo (private)
 - Create a key, add pub (no write access) to the new repo
-- Add a new repo in Argo-CD (enter priv. key there)
+- Add a new repo in Argo-CD (in GUI, check both checkboxes, enter priv. key)
 - Create a new application in Argo-CD
 
+
+## see also
+
+https://github.com/smirnov-mi/my-charts-pr/blob/main/README.md
 
 
 

@@ -6,11 +6,13 @@ Optional: Cert-manager. Can be deployed as ArgoCD app later.
 
 ## Current state
 
-**26.4.2024** - upd. to 6.7.15
+**1.May.2024** - upd. 6.7.15 to 6.7.18
 
-1.4.2024 - 6.2.3 (with values saved), then update to 6.7.3
+26.Apr.2024 - upd. to 6.7.15
 
-2024.03.09 - v. 6.2.3
+1.Apr.2024 - 6.2.3 (with values saved), then update to 6.7.3
+
+09.Mar.2024 - v. 6.2.3
 
  
 ## installation via Rancher - Apps

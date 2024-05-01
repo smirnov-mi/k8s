@@ -45,7 +45,7 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#ingress-config
 
 ##  private repo
 
-(private-repo.md)[private-repo.md]
+(private-repo.md)[argocd/private-repo.md]
 
 
 ## see also

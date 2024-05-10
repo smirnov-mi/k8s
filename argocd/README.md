@@ -2,7 +2,7 @@
 
 Prereq. DNS name for web-interface
 
-Optional: Cert-manager. Can be deployed as ArgoCD app later.
+Optional: Cert-manager. Can be deployed as ArgoCD app later (**TODO**).
 
 ## Current state
 

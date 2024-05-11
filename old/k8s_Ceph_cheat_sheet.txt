@@ -1,0 +1,49 @@
+Ceph Cheat Sheet
+
+
+connect to operator pod:
+
+root@max2-master-01:~# 
+kubectl -n rook-ceph exec -it $(kubectl -n rook-ceph get pod -l "app=rook-ceph-operator" -o jsonpath='{.items[0].metadata.name}') sh
+
+
+
+ceph status
+
+
+
+OSD (storage devices):
+
+ceph osd status
+
+ceph osd pool ls
+
+
+
+FS:
+ceph fs ls
+
+ceph fs status
+
+rados df
+
+
+
+DELETE FSs:
+
+systemctl stop ceph-mds.target
+killall ceph-mds
+
+ceph mds cluster_down
+ceph mds fail 0
+
+ceph fs rm <cephfs name> --yes-i-really-mean-it
+
+ceph osd pool delete <cephfs data pool> <cephfs data pool> --yes-i-really-really-mean-it
+ceph osd pool delete <cephfs metadata pool> <cephfs metadata pool> --yes-i-really-really-mean-it
+
+rm -rf "/var/lib/ceph/mds/<cluster-metadata server>"
+
+ceph auth del mds."$hostname"
+
+

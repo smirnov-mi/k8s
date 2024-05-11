@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: 'true'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/server-snippet: |
+      proxy_ssl_verify off;
+  creationTimestamp: '2023-02-23T11:20:54Z'
+  name: rook-ceph-mgr-dashboard
+  namespace: rook-ceph
+
+spec:
+  rules:
+    - host: cluster-t4.maxxxx.de
+      http:
+        paths:
+          - backend:
+              service:
+                name: rook-ceph-mgr-dashboard
+                port:
+                  number: 8443
+            path: /ceph(/|$)(.*)
+            pathType: Prefix
+  tls:
+    - hosts:
+        - cluster-t4.maxxxx.de
+      secretName: cluster-t4.maxxxx.de-tls
+

@@ -1,0 +1,46 @@
+
+2019 07 03
+
+
+patroni-etcd re-assamble:
+
+
+root@max2-master-01:~/tmp2# kubectl get statefulset -n appl1 patroni-etcd  -o yaml > patroni-etcd_3-2-18_Statefulset.yaml
+
+root@max2-master-01:~/tmp2# kubectl delete statefulset -n appl1 patroni-etcd
+
+root@max2-master-01:~/tmp2# kubectl create -f  patroni-etcd_3-2-18_Statefulset.yaml
+
+
+THAT'S ALL.
+
+
+=========================
+
+
+details :   
+
+root@max2-master-03:~# kugetw po |grep etcd
+appl1 patroni-etcd-0 0/1     CrashLoopBackOff   13         43m     10.244.3.156     max2-worker-02   <none>           <none>
+appl1 patroni-etcd-1 1/1     Running            5          2d      10.244.4.133     max2-worker-01   <none>           <none>
+appl1 patroni-etcd-2 0/1     CrashLoopBackOff   13         43m     10.244.5.121     max2-worker-03   <none>           <none>
+
+
+root@max2-master-03:~# kubectl logs -f -n appl1 patroni-etcd-0
+etcd member: patroni-etcd-0
+Re-joining etcd member: 35b30011a80a4e46, eps_val: http://patroni-etcd-0.patroni-etcd:2379,http://patroni-etcd-1.patroni-etcd:2379,http://patroni-etcd-2.patroni-etcd:2379
+client: etcd cluster is unavailable or misconfigured; error #0: client: endpoint http://patroni-etcd-1.patroni-etcd:2379 exceeded header timeout
+; error #1: dial tcp: lookup patroni-etcd-0.patroni-etcd on 10.96.0.10:53: no such host
+; error #2: dial tcp: lookup patroni-etcd-2.patroni-etcd on 10.96.0.10:53: no such host
+
+
+/ # uname -n && cat /var/run/etcd/member_id
+patroni-etcd-1
+1057ab6bd64af654
+
+
+patroni-etcd-0 35b30011a80a4e46
+patroni-etcd-2 c1cc9d2a33a5684f
+
+
+----

@@ -56,8 +56,12 @@ reboot
 
 ### prepare packages, DRAIN the master1 node, upgrade packages, upgrade plan, apply plan
 
+
+
+# 24.02.2024    1.29.0-1.1 -> 1.29.2-1.1
+
+
 ```
-24.02.2024    1.29.0-1.1 -> 1.29.2-1.1
 
     4  apt update
     5  k drain controlplane

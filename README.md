@@ -2,7 +2,14 @@
 general k8s things
 
 
+## kodekloud cheat sheet
+
+https://kodekloud.com/pages/k8s-commands-cheatsheet?utm_source=linkedin&utm_medium=social&utm_campaign=dg-kubernetes-skill+-+k8s+Commands+Cheatsheet&utm_content=singlepost-educational
+
+
+
 ## useful
+
 
 
 ### combine multiple contexts

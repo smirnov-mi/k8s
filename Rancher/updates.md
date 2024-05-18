@@ -2,7 +2,27 @@
 
 ## Rancher updates
 
-Rancher v2.8.3
+18.5.2024 Rancher v2.8.3 -> v2.8.4
+
+### Upgrade a single docker installation
+
+https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/other-installation-methods/rancher-on-a-single-node-with-docker/upgrade-docker-installed-rancher
+
+```bash
+docker stop <RANCHER_CONTAINER_NAME>
+docker create --volumes-from <RANCHER_CONTAINER_NAME> --name rancher-data rancher/rancher:<RANCHER_CONTAINER_TAG>
+docker run --volumes-from rancher-data -v "$PWD:/backup" --rm busybox tar zcvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>.tar.gz /var/lib/rancher
+
+docker pull rancher/rancher:<RANCHER_VERSION_TAG>
+
+# Start Docker from the new image
+docker run .....
+
+# Remove the previous Rancher server container. If you only stop the previous Rancher server container (and don't remove it), the container may restart after the next server reboot.
+
+```
+
+
 
 
 ## Updating RKE cluster

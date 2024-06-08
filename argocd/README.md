@@ -2,6 +2,12 @@
 
 Prereq. DNS name for web-interface
 
+https://artifacthub.io/packages/helm/argo/argo-cd?modal=install
+
+    helm repo add argo https://argoproj.github.io/argo-helm
+    helm install my-argo-cd argo/argo-cd --version 7.1.2
+
+
 Optional: Cert-manager. Can be deployed as ArgoCD app later (**TODO**).
 
 ## Current state

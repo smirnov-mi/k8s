@@ -12,7 +12,9 @@ Optional: Cert-manager. Can be deployed as ArgoCD app later (**TODO**).
 
 ## Current state
 
-**11.May.2024** - upd 6.7.18 to 6.8.1(2.11.0)
+**08.06.2024** - fresh install on a new cluster, 7.1.2 (2.11.3)
+
+11.May.2024 - upd 6.7.18 to 6.8.1(2.11.0)
 
 1.May.2024 - upd. 6.7.15 to 6.7.18
 

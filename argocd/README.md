@@ -23,11 +23,11 @@ Optional: Cert-manager. Can be deployed as ArgoCD app later (**TODO**).
 
 ```txt
 08.Jun.2024 - fresh install on a new cluster, 7.1.2 (2.11.3)
-11.May.2024 - upd 6.7.18 to 6.8.1(2.11.0)
-1.May.2024 - upd. 6.7.15 to 6.7.18
+11.May.2024 - upd. 6.7.18 > 6.8.1 (2.11.0)
+01.May.2024 - upd. 6.7.15 > 6.7.18
 26.Apr.2024 - upd. to 6.7.15
-2.Apr.2024 - new isntall 6.2.3 (with values saved), then update to 6.7.3
-09.Mar.2024 - v. 6.2.3
+02.Apr.2024 - install 6.2.3, update to 6.7.3
+09.Mar.2024 - install 6.2.3
 ```
   <summary>
   previous
@@ -44,7 +44,7 @@ kubectl api-resources  | grep -i argo
 ```
 
 
-See rancher-values.yaml for Ingress etc.
+See [rancher-values.yaml](https://github.com/smirnov-mi/how-to/blob/main/argocd/rancher-values-small.yaml) for Ingress etc.
 
 
 

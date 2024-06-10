@@ -36,6 +36,42 @@ https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.18.md
 
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 
+###  latest all-in
+
+**24.02.2024    1.29.0-1.1 -> 1.29.2-1.1**
+
+
+```bash
+alias 'k=kubectl'
+apt update
+k drain controlplane --ignore-daemonsets --delete-emptydir-data
+apt-cache madison kubeadm
+apt install kubeadm=1.29.2-1.1
+kubeadm version
+kubeadm upgrade plan
+kubeadm upgrade apply v1.29.2
+apt install kubelet=1.29.2-1.1 kubectl=1.29.2-1.1
+systemctl restart kubelet
+systemctl status  kubelet
+k uncordon controlplane
+k get no
+k drain node01 --ignore-daemonsets --delete-emptydir-data
+ssh node01
+
+apt update
+apt install kubeadm=1.29.2-1.1
+kubeadm upgrade node
+apt install kubelet=1.29.2-1.1 kubectl=1.29.2-1.1
+systemctl daemon-reload
+systemctl restart kubelet
+exit
+
+k uncordon node01
+k get no
+k get events --sort-by=.metadata.creationTimestamp
+
+```
+
 
 
 
@@ -49,57 +85,12 @@ reboot
 ```
 
 
-
-
 ## 1) Master1 (first control plane node):
 
 
 ### prepare packages, DRAIN the master1 node, upgrade packages, upgrade plan, apply plan
 
-
-
-# 24.02.2024    1.29.0-1.1 -> 1.29.2-1.1
-
-
-```
-
-    4  apt update
-    5  k drain controlplane
-    6  k drain controlplane --ignore-daemonsets
-    7  apt-cache madison kubeadm
-    8  apt install kubeadm=1.29.2-1.1
-    9  kubeadm --version
-   10  kubeadm version
-   11  kubeadm upgrade plan
-   12  kubeadm upgrade apply v1.29.2
-   13  apt install kubelet=1.29.2-1.1 kubectl=1.29.2-1.1
-   14  systemctl restart kubelet
-   15  systemctl status  kubelet
-   16  k uncordon controlplane
-   17  k get no
-   20  k drain node01 --ignore-daemonsets --delete-emptydir-data
-   21  ssh node01
-
-
-    3  apt update
-    4  apt install kubeadm=1.29.2-1.1
-    5  kubeadm upgrade node
-    6  apt install kubelet=1.29.2-1.1 kubectl=1.29.2-1.1
-    7  systemctl daemon-reload
-    8  systemctl restart kubelet
-    9  exit
-
-
-   22  k uncordon node01
-   23  k get no
-   26  k get events --sort-by=.metadata.creationTimestamp
-
-
-
-
-
-
-
+```bash
 root@max2-master-01:~# kubelet --version
 Kubernetes v1.17.2
 root@max2-master-01:~# apt-cache madison kubeadm

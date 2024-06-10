@@ -15,6 +15,7 @@ The upgrade workflow at high level is the following:
 
 
 **See official documentation.**
+incl. known issues: https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.18.md#known-issues
 
 **Upgrading controlplanes**:
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
@@ -28,13 +29,6 @@ taking an etcd snapshot might be a good idea, see [etcd_backups.md](etcd_backups
 
 
 ## k8s upgrade
-
-24.02.2024    1.29.0-1.1 -> 1.29.2-1.1
-
-
-https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.18.md#known-issues
-
-https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 
 ###  latest all-in
 

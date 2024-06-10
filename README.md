@@ -33,13 +33,9 @@ see also: https://devopscube.com/kubernetes-kubeconfig-file/
 Kubernetes jobs https://medium.com/teamsnap-engineering/properly-running-kubernetes-jobs-with-sidecars-in-2024-k8s-1-28-ad9b51d17d50
 
 
+# HELM
 
-### HELM
-
-Helm charts training:
- 
-https://m.youtube.com/watch?v=EbgwXCTVN1o&list=PLSwo-wAGP1b8svO5fbAr7ko2Buz6GuH1g&index=12
-
+(https://github.com/smirnov-mi/tech/blob/main/helm/)[https://github.com/smirnov-mi/tech/blob/main/helm/]
 
 
 

@@ -35,7 +35,7 @@ Kubernetes jobs https://medium.com/teamsnap-engineering/properly-running-kuberne
 
 # HELM
 
-(https://github.com/smirnov-mi/tech/blob/main/helm/)[https://github.com/smirnov-mi/tech/blob/main/helm/]
+[https://github.com/smirnov-mi/tech/blob/main/helm/](https://github.com/smirnov-mi/tech/blob/main/helm/README.md)
 
 
 

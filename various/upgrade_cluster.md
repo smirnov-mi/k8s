@@ -24,7 +24,7 @@ https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-linux-nodes/
 
 
-taking an etcd snapshot might be a good idea, see [etcd_backups.md](etcd_backups.md)
+taking an etcd snapshot might be a good idea, see [etcd_backup.md](etcd_backup.md)
 
 
 

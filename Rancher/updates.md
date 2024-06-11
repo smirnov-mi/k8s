@@ -2,7 +2,7 @@
 
 ## Rancher updates
 
-18.5.2024 Rancher v2.8.3 -> v2.8.4
+18.5.2024 Rancher v2.8.3 -> v2.8.4 (check https://github.com/rancher/rancher for latest version)
 
 ### Upgrade a single docker installation
 

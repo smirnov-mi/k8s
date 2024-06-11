@@ -28,16 +28,18 @@ docker run .....
 ## Updating RKE cluster
 
 
-11.06.2024
+11.06.2024 : updating RKE Cluster k8s 1.28.9-rancher1-1 -> 1.28.10-rancher1-1
 
-updating RKE Cluster k8s 1.28.9-rancher1-1 -> 1.28.10-rancher1-1
+```bash
+NAME STATUS ROLES                   AGE VERSION INTERNAL-IP EXTERNAL-IP   OS-IMAGE    KERNEL-VERSION      CONTAINER-RUNTIME
+t1-1 Ready controlplane,etcd,worker 3d v1.28.10   1.2.3.4  <none> Ubuntu 22.04.4 LTS  5.15.0-112-generic docker://26.1.4
+t1-2 Ready controlplane,etcd,worker 3d v1.28.10   1.2.3.5  <none> Ubuntu 22.04.4 LTS  5.15.0-112-generic docker://26.1.4
+t1-3 Ready controlplane,etcd,worker 3d v1.28.10   1.2.3.6  <none> Ubuntu 22.04.4 LTS  5.15.0-112-generic docker://26.1.4
+```
 
 
 
-
-16.05.2024
-
-updating RKE Cluster k8s 1.28.8 -> 1.28.9
+16.05.2024 : updating RKE Cluster k8s 1.28.8 -> 1.28.9
 
 ```bash
 NAME STATUS ROLES                    AGE  VERSION INTERNAL-IP EXTERNAL-IP  OS-IMAGE      KERNEL-VERSION     CONTAINER-RUNTIME

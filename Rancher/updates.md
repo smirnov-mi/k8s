@@ -27,6 +27,14 @@ docker run .....
 
 ## Updating RKE cluster
 
+
+11.06.2024
+
+updating RKE Cluster k8s 1.28.9-rancher1-1 -> 1.28.10-rancher1-1
+
+
+
+
 16.05.2024
 
 updating RKE Cluster k8s 1.28.8 -> 1.28.9

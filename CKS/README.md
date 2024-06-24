@@ -1,5 +1,10 @@
 # Preparation for CKS exam
 
+
+Killer Shell - 11 hours course
+
+https://www.youtube.com/watch?v=d9xfB5qaOfg
+
 https://m.youtube.com/watch?v=d9xfB5qaOfg
 
 

@@ -24,6 +24,9 @@ the environment is not fast, copy-paste is not perfect,
 you would be glad you KNOW how to do stuff instead of searching through the documentation.
 
 
+**Absolutely MUST HAVE tasks** are ETCD BACKUP and CLUSTER PATCHING, these must be trained a lot.
+
+
 
 ## Objectives
 
@@ -312,6 +315,7 @@ For namespace ns1, allow only connection towards "db" pods in the namespace ns2 
 https://kubernetes.io/docs/concepts/services-networking/network-policies/
 
 
+
 ## 10 - Role, RoleBinding, ServiceAccount
 
 Create a new ServiceAccount (or user) processor in Namespace project-hamster.
@@ -332,6 +336,8 @@ kubectl auth can-i create secret -n project-hamster --as system:serviceaccount:p
 Show current context with usage of kubectl and without;
 show all contexts
 
+<details>
+
 ```
 kubectl config get-contexts -o=name
 
@@ -340,20 +346,35 @@ grep ontext ~/.kube/config ....
 kubectl config use-context my-dev-cluster
 ```
 
+  <summary>
+  Solution 
+  </summary>
+</details>
+
 
 ## 12 - Schedule a pod on a controlplane
 
 ### 12.1 nodeName
 
+If the nodes have no taints:
+
+<details>
+
 ```
 spec:
   nodeName: controlplane
 ```
+  <summary>
+  Add foll. to pod.yaml 
+  </summary>
+</details>
 
 
 ### 12.2 add tolerations
 
-describe the control node, look for taints, then add tolerations to the pod/depl spec
+Describe the control node, look for taints, then add tolerations to the pod/depl spec
+
+<details>
 
 ```
 # show nodes with taints (incl their taints)
@@ -374,6 +395,10 @@ spec:
     operator: Exists
     effect: NoExecute
 ```
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 
 ## 13 - Ingress two services
@@ -384,19 +409,21 @@ expose two services on: domain.name/one and domain.name/two
 
 ### without
 
-Eexpose a service svc1 on the path /path.
+Expose a service svc1 on the path /path.
 Verify from the internal IP using curl -kL ip:port/path 
 
 
 
 ## 14 - Run a pod with image xyz and secrets/configmaps mounted or used as a env
 
-create one (or two) secrets, create a pod, edit it's yaml
+Use documentation, create one (or two) secrets, create a pod, edit it's yaml
 
 
 
 
 ## 15 - Review / Verify Certificates, Valid dates etc.
+
+<details>
 
 ```
 kubeadm certs check-expiration
@@ -411,7 +438,10 @@ openssl x509 -noout -text -in /var/lib/kubelet/pki/kubelet.crt |grep -A2 Valid
             Not Before: Feb  4 06:54:35 2024 GMT
             Not After : Feb  3 06:54:35 2025 GMT
 ```
-
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 
 ## 16 - One pod with 3 containers, same storage (not PV)
@@ -439,10 +469,16 @@ see docs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liv
 
 create an HPA for deployment XYZ 
 
+<details>
+
 ```
 kubectl autoscale deployment xyz --min=1 --max=5 --cpu-percent=80
 
 ```
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 Note: in real life the pods must have the cpu request / limit set, so the hpa can work.
 
@@ -452,6 +488,7 @@ Note: in real life the pods must have the cpu request / limit set, so the hpa ca
 
 Display events or pods sorted by creation time.
 
+<details>
 
 ```
 k get po -A  --sort-by=.metadata.creationTimestamp
@@ -459,19 +496,28 @@ k get po -A  --sort-by=.metadata.uid
 
 k get events -A --sort-by=.metadata.creationTimestamp
 ```
-
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 
 ## 21 - metrics / resource usage
 
 Display usage by nodes; by pods AND it's containers
 
+
+<details>
+
 ```
 k top no
 
 k top po --containers -A
 ```
-
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 
 ## 22 - k8s components overview / informationw
@@ -484,10 +530,12 @@ What CNI driver is installed and where it's config?
 
 ## 23 - Manual scheduling
 
-Requires a non RKE cluster.
+Requires a non RKE cluster for training. Use e.g. killercoda
 
+<details>
 
 Kill / stop scheduler:
+
 ```
 mv /etc/kubernetes/manifests/kube-scheduler /root/
 ```
@@ -498,20 +546,31 @@ start scheduler:
 ```
 mv /root/kube-scheduler.yaml /etc/kubernetes/manifests/
 ```
-
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 
 ## 24 - Changing an existing deployment
 
 ### 24.1 scale-up / -down a deployment / replicaset
 
+<details>
+
 Straight-forward:
 
 ```
 k scale deployment depl1 --replicas=3
 ```
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 ### 24.2 change the image of the existing deployment/rs
+
+<details>
 
 ```
 # find the names/images:
@@ -521,6 +580,10 @@ k get -n ns deploy depl1 -o yaml |egrep -i "name|image"
 k set -n ns image deployment depl-name container-name=newimage
 
 ```
+  <summary>
+  Solution 
+  </summary>
+</details>
 
 ## 25 - Pods with PriorityClass
 
@@ -535,5 +598,16 @@ Adding an init container to an existing pod.
 
 
 ## 27 - Cronjobs
+
+
+## 28 - ETCD Backup / restore
+
+Backup and restore the ETCD in the cluster.
+
+
+## 29 - Upgrade the cluster version
+
+Upgrade the k8s to a specified version.
+
 
 

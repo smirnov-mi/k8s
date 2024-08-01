@@ -602,7 +602,59 @@ Adding an init container to an existing pod.
 
 ## 28 - ETCD Backup / restore
 
-Backup and restore the ETCD in the cluster.
+Etcd Snapshot Save and Restore
+ 
+
+
+Make a backup of etcd running on cluster3-controlplane1 and save it on the controlplane node at /tmp/etcd-backup.db.
+
+Then create any kind of Pod in the cluster.
+
+Finally restore the backup, confirm the cluster is still working and that the created Pod is no longer with us.
+
+Use a killercoda env to practice this. [https://killercoda.com/playgrounds/scenario/cka](https://killercoda.com/playgrounds/scenario/cka)
+
+
+<details>
+
+```
+# get info:
+controlplane $ cat /etc/kubernetes/manifests/etcd.yaml |egrep "crt|key|path"
+
+
+# create a backup:
+controlplane $ ETCDCTL_API=3 etcdctl --endpoints  https://172.30.1.2:2379 snapshot save snapshot.db --cert="/etc/kubernetes/pki/etcd/server.crt" --cacert="/etc/kubernetes/pki/etcd/ca.crt" --key="/etc/kubernetes/pki/etcd/server.key"
+
+
+# run a small pod
+k run my-test-pod --image=nginx:alpine
+
+
+# restore a backup to a spec. location:
+ETCDCTL_API=3 etcdctl --data-dir /var/lib/etcd-backup  snapshot restore snapshot.db \
+--cacert /etc/kubernetes/pki/etcd/ca.crt \
+--cert /etc/kubernetes/pki/etcd/server.crt \
+--key /etc/kubernetes/pki/etcd/server.key
+
+#  stop all controlplane components:
+mv /etc/kubernetes/manifests/*.yaml .
+
+# wait a few moments, check with
+crictl ps
+
+# edit the etcd.yaml spec.Volumes.hostPath.path to the new location and move yaml files back (/var/lib/etcd-backup)
+mv ./*.yaml /etc/kubernetes/manifests/
+
+
+# check running pods, out test pod should not be there
+
+```
+  <summary>
+  Solution 
+  </summary>
+</details>
+
+
 
 
 ## 29 - Upgrade the cluster version

@@ -17,11 +17,17 @@ Optional: Cert-manager. Can be deployed as ArgoCD app later (**TODO**).
 
 ## Current state
 
-**09.06.2024** - upd. 7.1.2 > 7.1.3 (2.11.3)
+**15.Sep.2024** - upd. 7.1.3 > 7.5.2 (2.12.3)
+
+```bash
+helm upgrade --history-max=5 --install=true --namespace=argo --timeout=10m0s --values=/home/shell/helm/values-argo-cd-7.5.2.yaml --version=7.5.2 --wait=true argocd /home/shell/helm/argo-cd-7.5.2.tgz
+```
+
 
 <details>
 
 ```txt
+09.Jun.2024 - upd. 7.1.2 > 7.1.3 (2.11.3)
 08.Jun.2024 - fresh install on a new cluster, 7.1.2 (2.11.3)
 11.May.2024 - upd. 6.7.18 > 6.8.1 (2.11.0)
 01.May.2024 - upd. 6.7.15 > 6.7.18

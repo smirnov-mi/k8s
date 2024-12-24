@@ -49,7 +49,7 @@ local-storage   kubernetes.io/no-provisioner   Delete          WaitForFirstConsu
 ### Create Local PersistentVolume
 
 Create PersistentVolume with a reference to local-storage StorageClass.
-Note the **path**, it **must be created manually on the node**.
+Note the **path**, it **must be created manually on the node**, add chmod 700 on it.
 
 Requires a **nodename** label of the corresponding node, get it with:
 
